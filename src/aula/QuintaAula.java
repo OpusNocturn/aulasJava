@@ -15,8 +15,21 @@ public class QuintaAula {
 			System.out.println( "Substring: " + str.substring(0,10));
 			System.out.println("Caracter na posição 5: " + str.charAt(5));
 			
+			String sar = "Isto é uma String do Java";
+			// O método split quebra a String e várias outras, pelo separador desejado
+			String[] palavras = sar.split("");
+			int i = sar.indexOf("uma"); //retorna o índice da palavra na String
+			if(sar.startsWith("Olá") || sar.endsWith("Mundo!") ) {
+			//testa o começo e o fim da String - retorna boolean
+			}	
+			sar = sar.trim(); //elimina os espaços em branco no início e fim
 			
+			sar = str.replace('a', '@'); // substitui os caracteres
 			
-	}
+			//substitui uma palavra(usa expressões regulares)
+			sar = sar.replaceAll("String", "Cadeia de caracteres");
+		}
+	
+	
 
 }
