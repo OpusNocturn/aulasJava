@@ -35,9 +35,11 @@ public class SextaAula {
 	
 	
 	//Exercício 10
-	
-	int res = 8+8+8+8+8+8+8+8;	
-	System.out.println(res);
+		int a = 0;
+	for (int i=0; i<8; i++) {
+		a = a + 9;
+	}	
+	System.out.println(a);
 		}
 	
 	}
