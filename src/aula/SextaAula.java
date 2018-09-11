@@ -1,7 +1,7 @@
 package aula;
 
 public class SextaAula {
-	public static void main(String args [])
+	public static void main(String args []) {
 	//Exercício 7
 	/*{
 		int r = 12;
@@ -35,10 +35,9 @@ public class SextaAula {
 	
 	
 	//Exercício 10
-	{
-	int oito = 8;
-	double res = oito**2;
-	System.out.println(res);
-	}
 	
-}
+	int res = 8+8+8+8+8+8+8+8;	
+	System.out.println(res);
+		}
+	
+	}
