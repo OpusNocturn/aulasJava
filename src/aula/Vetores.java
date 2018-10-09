@@ -16,7 +16,12 @@ public class Vetores {
 		matriz [2][0] = 3;
 		matriz [2][1] = 52;
 		matriz [2][2] = 74;
-		System.out.println(matriz);
+
+		// https://www.devmedia.com.br/vetores-em-java/21449
+		
+		for(matriz [0][0] = 1; matriz [0][0] < 100; matriz [0][0] = matriz [0][0] + matriz [0][1]) {
+			System.out.println(matriz);
+		}
 	}
 
 }
