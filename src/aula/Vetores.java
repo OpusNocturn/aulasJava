@@ -19,6 +19,9 @@ public class Vetores {
 
 		// https://www.devmedia.com.br/vetores-em-java/21449
 		
+		// https://www.inf.pucrs.br/~pinho/LaproI/Vetores/Vetores.htm
+		
+		/*
 		for(int i = 0; i <= 2; i++){
 			for(int x = 0;  x <= 2; x++){
 				System.out.print(matriz[i][x] + " ");
@@ -26,4 +29,13 @@ public class Vetores {
 			System.out.println();
 			}
 		}
+	*/
+		
+	for(int i = 0; i <= 2; i++){
+		for(int x = 0;  x <= 2; x++){
+			System.out.print(matriz[i][x] + " ");
+			}
+		System.out.println(matriz[0][0] + matriz[1][1] + matriz[2][2]);
+		}
 	}
+}
