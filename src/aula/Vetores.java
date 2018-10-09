@@ -3,7 +3,7 @@ package aula;
 public class Vetores {
 	public static void main(String[] args) {
 		
-		int matriz [][] = null;
+		int matriz [][] = new int [3][3];
 		
 		matriz [0][0] = 1;
 		matriz [0][1] = 10;
@@ -19,9 +19,11 @@ public class Vetores {
 
 		// https://www.devmedia.com.br/vetores-em-java/21449
 		
-		for(matriz [0][0] = 1; matriz [0][0] < 100; matriz [0][0] = matriz [0][0] + matriz [0][1]) {
-			System.out.println(matriz);
+		for(int i = 0; i <= 2; i++){
+			for(int x = 0;  x <= 2; x++){
+				System.out.print(matriz[i][x] + " ");
+				}
+			System.out.println();
+			}
 		}
 	}
-
-}
