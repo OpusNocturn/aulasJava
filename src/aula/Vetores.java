@@ -17,8 +17,29 @@ public class Vetores {
 		matriz [2][1] = 52;
 		matriz [2][2] = 74;
 
-		// https://www.devmedia.com.br/vetores-em-java/21449
-		
+	int soma = 0;	
+	for(int i = 0; i <= 2; i++){
+		for(int j = 0;  j <= 2; j++){
+			System.out.print(matriz[i][j] + " ");
+			if(i==j){
+				soma = matriz[i][j] + soma;
+				}
+			
+			}
+		System.out.println("");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+//https://www.devmedia.com.br/vetores-em-java/21449
+
 		// https://www.inf.pucrs.br/~pinho/LaproI/Vetores/Vetores.htm
 		
 		/*
@@ -26,16 +47,8 @@ public class Vetores {
 			for(int x = 0;  x <= 2; x++){
 				System.out.print(matriz[i][x] + " ");
 				}
+				//System.out.print(matriz[i][j] + " ");
 			System.out.println();
 			}
 		}
 	*/
-		
-	for(int i = 0; i <= 2; i++){
-		for(int x = 0;  x <= 2; x++){
-			System.out.print(matriz[i][x] + " ");
-			}
-		System.out.println(matriz[0][0] + matriz[1][1] + matriz[2][2]);
-		}
-	}
-}
