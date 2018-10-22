@@ -17,15 +17,17 @@ public class Vetores2 {
 		matriz [2][1] = 52;
 		matriz [2][2] = 74;
 
-		
-	int multi = 1;	
+	int mult = 1;	
 	for(int i = 0; i <= 2; i++){
 		for(int j = 0;  j <= 2; j++){
-			if(i>j) {
-				System.out.print(matriz[i][j]);
+			System.out.print(matriz[i][j] + " ");
+			if(i==0 && j == 2 || i == 1 && j == 1 || i == 2 && j == 0){
+				mult = matriz[i][j] * mult;
 				}
+			
 			}
+		System.out.println("");
 		}
-	System.out.print(".");
+	System.out.println(mult);
 	}
 }

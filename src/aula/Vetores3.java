@@ -1,6 +1,6 @@
 package aula;
 
-public class Vetores {
+public class Vetores3 {
 	public static void main(String[] args) {
 		
 		int matriz [][] = new int [3][3];
@@ -17,39 +17,17 @@ public class Vetores {
 		matriz [2][1] = 52;
 		matriz [2][2] = 74;
 
-	int soma = 0;	
+	double divisao = 1;	
 	for(int i = 0; i <= 2; i++){
 		for(int j = 0;  j <= 2; j++){
 			System.out.print(matriz[i][j] + " ");
-			if(i==j){
-				soma = matriz[i][j] + soma;
+			if(i==1 && j == 1 || i == 2 && j == 1){
+				divisao = matriz[i][j] / divisao;
 				}
 			
 			}
 		System.out.println("");
 		}
-	System.out.println(soma);
+	System.out.println(divisao);
 	}
 }
-
-
-
-
-
-
-
-
-//https://www.devmedia.com.br/vetores-em-java/21449
-
-		// https://www.inf.pucrs.br/~pinho/LaproI/Vetores/Vetores.htm
-		
-		/*
-		for(int i = 0; i <= 2; i++){
-			for(int x = 0;  x <= 2; x++){
-				System.out.print(matriz[i][x] + " ");
-				}
-				//System.out.print(matriz[i][j] + " ");
-			System.out.println();
-			}
-		}
-	*/
