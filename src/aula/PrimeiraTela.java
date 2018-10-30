@@ -55,9 +55,20 @@ public class PrimeiraTela extends JFrame{
 		
 			
 		////////////////////////////////////////////////////
+		
+				JLabel lblCelular = new JLabel("Celular: ");
+				JTextField txtCelular = new JTextField();
+				
+					paine.add(lblCelular);
+					lblCelular.setBounds(290,110,100,20);
+					
+					paine.add(txtCelular);
+					txtCelular.setBounds(340,110,200,20);
+				
+		////////////////////////////////////////////////////
 			
 		this.setLayout(null);
-		this.setSize(400, 400);
+		this.setSize(600, 400);
 		//this.setResizable(0);
 		this.setVisible(true);
 		
