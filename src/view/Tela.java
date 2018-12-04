@@ -53,111 +53,108 @@ public class Tela extends JFrame{
 
 	
 	public Tela(){
-		super("Aula");
+		super("Calculadora");
 		
 		Container paine = this.getContentPane();
 		
 		//Guia superior
 		paine.add(exibir);
-		exibir.setBounds(1,10,100,10);
+		exibir.setBounds(10,10,100,20);
 		
 		paine.add(editar);
-		editar.setBounds(50,10,100,10);
+		editar.setBounds(60,10,100,20);
 		
 		paine.add(ajuda);
-		ajuda.setBounds(100,10,100,10);
+		ajuda.setBounds(110,10,100,20);
 		
 		//Campo de texto
 		paine.add(campo);
-		campo.setBounds(20,45,232,60);
+		campo.setBounds(10,38,330,75);
 		
 		//Botões
 		paine.add(btnMC);
-		btnMC.setBounds(20,119,43,30);
+		btnMC.setBounds(10,119,60,50);
 		
 		paine.add(btnMR);
-		btnMR.setBounds(68,119,43,30);
+		btnMR.setBounds(78,119,60,50);
 		
 		paine.add(btnMS);
-		btnMS.setBounds(113,119,43,30);
+		btnMS.setBounds(145,119,60,50);
 		
 		paine.add(btnMmais);
-		btnMmais.setBounds(160,119,43,30);
+		btnMmais.setBounds(212,119,60,50);
 		
 		paine.add(btnMmenos);
-		btnMmenos.setBounds(210,119,43,30);
+		btnMmenos.setBounds(280,119,60,50);
 		
 		paine.add(btnCE);
-		btnCE.setBounds(68,152,43,30);
+		btnCE.setBounds(78,175,60,50);
 		
 		paine.add(btnC);
-		btnC.setBounds(113,152,43,30);
+		btnC.setBounds(145,175,60,50);
 		
 		paine.add(btnMaisMenos);
-		btnMaisMenos.setBounds(160,152,43,30);
+		btnMaisMenos.setBounds(212,175,60,50);
 		
 		paine.add(btnBack);
-		btnBack.setBounds(20,152,43,30);
+		btnBack.setBounds(10,175,60,50);
 		
 		paine.add(btnR);
-		btnR.setBounds(210,152,43,30);
+		btnR.setBounds(280,175,60,50);
 		
 		paine.add(btnSete);
-		btnSete.setBounds(20,186,43,30);
+		btnSete.setBounds(10,230,60,50);
 		
 		paine.add(btnOito);
-		btnOito.setBounds(68,186,43,30);
+		btnOito.setBounds(78,230,60,50);
 		
 		paine.add(btnPercent);
-		btnPercent.setBounds(210,186,43,30);
+		btnPercent.setBounds(280,230,60,50);
 		
 		paine.add(btnBarra);
-		btnBarra.setBounds(160,186,43,30);
+		btnBarra.setBounds(212,230,60,50);
 		
 		paine.add(btnNove);
-		btnNove.setBounds(113,186,43,30);
+		btnNove.setBounds(145,230,60,50);
 		
 		paine.add(btnCinco);
-		btnCinco.setBounds(68,220,43,30);
+		btnCinco.setBounds(78,288,60,50);
 		
 		paine.add(btnQuatro);
-		btnQuatro.setBounds(20,220,43,30);
+		btnQuatro.setBounds(10,288,60,50);
 		
 		paine.add(btnUm);
-		btnUm.setBounds(20,255,43,30);
+		btnUm.setBounds(10,347,60,50);
 		
 		paine.add(btnX);
-		btnX.setBounds(210,220,55,30);
+		btnX.setBounds(280,288,60,50);
 		
 		paine.add(btnEstrela);
-		btnEstrela.setBounds(160,220,43,30);
+		btnEstrela.setBounds(212,288,60,50);
 		
 		paine.add(btnSeis);
-		btnSeis.setBounds(113,220,43,30);
-		
-		paine.add(btnUm);
-		btnUm.setBounds(20,255,43,30);
+		btnSeis.setBounds(145,288,60,50);
 		
 		paine.add(btnDois);
-		btnDois.setBounds(68,255,43,30);
+		btnDois.setBounds(78,347,60,50);
 		
 		paine.add(btnTres);
-		btnTres.setBounds(113,255,43,30);
+		btnTres.setBounds(145,347,60,50);
 		
 		paine.add(btnMenos);
-		btnMenos.setBounds(160,255,43,30);
+		btnMenos.setBounds(212,347,60,50);
 		
 		paine.add(btnIgual);
-		btnIgual.setBounds(210,256,43,65);
+		btnIgual.setBounds(280,348,60,108);
 		
 		paine.add(btnZero);
-		btnZero.setBounds(20,290,90,30);
+		btnZero.setBounds(10,405,129,50);
 		
 		paine.add(btnPonto);
-		btnPonto.setBounds(113,290,43,30);
+		btnPonto.setBounds(145,405,60,50);
 		
 		paine.add(btnMais);
-		btnMais.setBounds(160,290,43,30);
+		btnMais.setBounds(212,405,60,50);
 		
 		
 		
@@ -166,7 +163,7 @@ public class Tela extends JFrame{
 		this.setLayout(null);
 		this.setVisible(true);
 		this.setLocation(700, 200);
-		this.setSize(280, 400);
+		this.setSize(365, 500);
 		this.setResizable(false);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
