@@ -1,12 +1,12 @@
 package view;
 
 import java.awt.Container;
-
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
@@ -14,13 +14,11 @@ public class Janela extends JFrame {
 	
 
 	
-	JLabel titulo = new JLabel("Calculadora:");
-	JLabel exibir = new JLabel("Exibir");
-	JLabel editar = new JLabel("Editar");
-	JLabel ajuda = new JLabel("Ajuda");
-	
-	//CAMPO DE TEXTO
+	//CAMPO DE TEXTO DOS NUMEROS
 	JTextField campo = new JTextField();
+	
+	//OPÇÕESS NO TOPO DA JANELA
+	JMenuBar menuBar = new JMenuBar();
 	
 	//BOTÕES
 	JButton btnMC = new JButton("MC");
@@ -51,28 +49,31 @@ public class Janela extends JFrame {
 	JButton btnVirgula = new JButton(",");
 	JButton btnMais = new JButton("+");
 	JButton btnIgual = new JButton("=");
+	
+	//Botão sair
+	JButton btnSair = new JButton("Sair");
 
 
 	public Janela() {
-		super("Principal");
+		super("Calculadora");
 		
 		Container paine = this.getContentPane();
 		
-		/////////////////////
-		
+		//configurações do menu
+		 setJMenuBar(menuBar);
+		 JMenu exibirMenu = new JMenu("Exibir");
+	     JMenu editarMenu = new JMenu("Editar");
+	     JMenu ajudaMenu = new JMenu("Ajuda");
+	     menuBar.add(exibirMenu);
+	     menuBar.add(editarMenu);
+	     menuBar.add(ajudaMenu);
+			
+	     
+		//Campo em branco
 		paine.add(campo);
-		campo.setBounds(5,20,335,60);
-		
-		paine.add(exibir);
-		exibir.setBounds(5,5,40,15);
-		paine.add(editar);
-		editar.setBounds(45,5,40,15);
-		paine.add(ajuda);
-		ajuda.setBounds(85,5,40,15);
-		
-		
-		/////////////////////
-		
+		campo.setBounds(5,8,335,70);
+	
+		//Configurações dos botões
 		paine.add(btnMC);
 		btnMC.setBounds(5,85,60,50);
 		
@@ -104,71 +105,73 @@ public class Janela extends JFrame {
 		btnRaiz.setBounds(280,140,60,50);
 
 		paine.add(btnSete);
-		btnSete.setBounds(5,230,90,30);
+		btnSete.setBounds(5,200,60,50);
 
 		paine.add(btnOito);
-		btnOito.setBounds(5,230,90,30);
+		btnOito.setBounds(70,200,60,50);
+		
+		paine.add(btnNove);
+		btnNove.setBounds(140,200,60,50);
 
 		paine.add(btnBarra);
-		btnBarra.setBounds(5,230,90,30);
+		btnBarra.setBounds(210,200,60,50);
 
 		paine.add(btnPercent);
-		btnPercent.setBounds(5,230,90,30);
+		btnPercent.setBounds(280,200,60,50);
 
 		paine.add(btnQuatro);
-		btnQuatro.setBounds(5,230,90,30);
+		btnQuatro.setBounds(5,260,60,50);
 
 		paine.add(btnCinco);
-		btnCinco.setBounds(5,230,90,30);
+		btnCinco.setBounds(70,260,60,50);
 
 		paine.add(btnSeis);
-		btnSeis.setBounds(5,230,90,30);
+		btnSeis.setBounds(140,260,60,50);
 
 		paine.add(btnAsterisco);
-		btnAsterisco.setBounds(5,230,90,30);
+		btnAsterisco.setBounds(210,260,60,50);
 
 		paine.add(btnUmx);
-		btnUmx.setBounds(5,230,90,30);
+		btnUmx.setBounds(280,260,60,50);
 
 		paine.add(btnUm);
-		btnUm.setBounds(5,230,90,30);
+		btnUm.setBounds(5,320,60,50);
 
 		paine.add(btnDois);
-		btnDois.setBounds(5,230,90,30);
+		btnDois.setBounds(70,320,60,50);
 
 		paine.add(btnTres);
-		btnTres.setBounds(5,230,90,30);
+		btnTres.setBounds(140,320,60,50);
 
 		paine.add(btnMenos);
-		btnMenos.setBounds(5,230,90,30);
+		btnMenos.setBounds(210,320,60,50);
 
 		paine.add(btnMais);
-		btnMais.setBounds(5,230,90,30);
+		btnMais.setBounds(210,380,60,50);
 
 		paine.add(btnZero);
-		btnZero.setBounds(5,230,90,30);
+		btnZero.setBounds(5,380,125,50);
 
 		paine.add(btnIgual);
-		btnIgual.setBounds(5,230,90,30);
+		btnIgual.setBounds(280,320,60,110);
 
 		paine.add(btnVirgula);
-		btnVirgula.setBounds(5,230,90,30);
+		btnVirgula.setBounds(140,380,60,50);
 		
 		
-		/////////////////////////
+		//Botão sair
+		paine.add(btnSair);
+		btnSair.setBounds(100,440,125,50);
+		btnSair.addActionListener(e -> System.exit(0)); //Encerra a aplicação
 		
+		//Configurações da tela
 		paine.setLayout(null);
-		this.setSize(370, 600);
+		this.setSize(360, 550);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		/*
-		paine.add(btnSair);
-		btnSair.setBounds(130,230,120,30);
-		btnSair.addActionListener(e -> System.exit(0)); //Encerra a aplicação
-		*/
 		
 		
 	}
