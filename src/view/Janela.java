@@ -1,6 +1,10 @@
 package view;
 
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Font;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -9,6 +13,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+
+//import calculos.FuncoesMatematicas;
 
 public class Janela extends JFrame {
 	
@@ -52,6 +58,12 @@ public class Janela extends JFrame {
 	
 	//Botão sair
 	JButton btnSair = new JButton("Sair");
+	
+	//Configurações de métodos matemáticos, valores...
+	
+//	FuncoesMatematicas mat = new FuncoesMatematicas();
+	String sinal = null; //Serve para ter certeza que, ao clicar em um botão, tal campo estará limpo, ou seja, antes o campo era nulo e só depois obteve algum valor
+	double valor1, valor2;
 
 
 	public Janela() {
@@ -69,9 +81,13 @@ public class Janela extends JFrame {
 	     menuBar.add(ajudaMenu);
 			
 	     
-		//Campo em branco
+		//Campo em branco para mostrar resultado
 		paine.add(campo);
+		campo.setFont(new Font("Arial", Font.PLAIN, 25));
 		campo.setBounds(5,8,335,70);
+		
+		
+		
 	
 		//Configurações dos botões
 		paine.add(btnMC);
@@ -157,6 +173,35 @@ public class Janela extends JFrame {
 
 		paine.add(btnVirgula);
 		btnVirgula.setBounds(140,380,60,50);
+		
+		
+		
+		
+		//Testes de ação com os botões
+		
+		btnOito.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("8");
+				}else {
+					campo.setText(campo.getText() + "8");
+				}
+				
+				
+			}
+		});
+			
+		btnIgual.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				valor2 = Double.parseDouble(campo.getText());
+/*
+				if(sinal.equals("soma")) {
+					campo.setText(mat.soma(valor1, valor2) + "");
+				}*/
+			}
+		});
 		
 		
 		//Botão sair
