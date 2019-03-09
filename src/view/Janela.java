@@ -7,14 +7,14 @@ import java.awt.Font;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
+//import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JRadioButton;
+//import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-//import calculos.FuncoesMatematicas;
+import calculos.FuncoesMatematicas;
 
 public class Janela extends JFrame {
 	
@@ -107,9 +107,23 @@ public class Janela extends JFrame {
 
 		paine.add(btnDelete);
 		btnDelete.setBounds(5,140,60,50);
+		btnDelete.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				campo.setText(campo.getText().substring(0, campo.getText().length() - 1)); 
+			}
+			
+		});
 
 		paine.add(btnCe);
 		btnCe.setBounds(70,140,60,50);
+		btnCe.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				campo.setText(""); 
+			}
+			
+		});
 
 		paine.add(btnC);
 		btnC.setBounds(140,140,60,50);
@@ -254,6 +268,14 @@ public class Janela extends JFrame {
 
 		paine.add(btnMais);
 		btnMais.setBounds(210,380,60,50);
+		btnMais.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "soma";
+				campo.setText("0");
+			}
+		});
+		
 
 		paine.add(btnZero);
 		btnZero.setBounds(5,380,125,50);
@@ -277,22 +299,28 @@ public class Janela extends JFrame {
 		
 		
 		
-		//Testes de ação com os botões
-		
-		
-		
-			
+		//Botão de igual
+				/*
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				valor2 = Double.parseDouble(campo.getText());
-/*
+
 				if(sinal.equals("soma")) {
 					campo.setText(mat.soma(valor1, valor2) + "");
-				}*/
+				}
+				else if(sinal.equals("subtracao")) {
+					campo.setText(mat.subtracao(valor1, valor2) - "");
+				}
+				else if(sinal.equals("multiplicacao")) {
+					campo.setText(mat.multiplicacao(valor1, valor2) * "");
+				}
+				else {
+					campo.setText(mat.divisao(valor1, valor2) / "");
+				}
 			}
 		});
-		
+		*/
 		
 		//Botão sair
 		paine.add(btnSair);
