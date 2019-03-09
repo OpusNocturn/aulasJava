@@ -122,12 +122,42 @@ public class Janela extends JFrame {
 
 		paine.add(btnSete);
 		btnSete.setBounds(5,200,60,50);
+		btnSete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("7");
+				}else {
+					campo.setText(campo.getText() + "7");
+				}			
+			}
+		});
 
 		paine.add(btnOito);
 		btnOito.setBounds(70,200,60,50);
+		btnOito.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("8");
+				}else {
+					campo.setText(campo.getText() + "8");
+				}			
+			}
+		});
 		
 		paine.add(btnNove);
 		btnNove.setBounds(140,200,60,50);
+		btnNove.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("9");
+				}else {
+					campo.setText(campo.getText() + "9");
+				}			
+			}
+		});
 
 		paine.add(btnBarra);
 		btnBarra.setBounds(210,200,60,50);
@@ -137,12 +167,42 @@ public class Janela extends JFrame {
 
 		paine.add(btnQuatro);
 		btnQuatro.setBounds(5,260,60,50);
+		btnQuatro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("4");
+				}else {
+					campo.setText(campo.getText() + "4");
+				}			
+			}
+		});
 
 		paine.add(btnCinco);
 		btnCinco.setBounds(70,260,60,50);
+		btnCinco.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("5");
+				}else {
+					campo.setText(campo.getText() + "5");
+				}			
+			}
+		});
 
 		paine.add(btnSeis);
 		btnSeis.setBounds(140,260,60,50);
+		btnSeis.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("6");
+				}else {
+					campo.setText(campo.getText() + "6");
+				}			
+			}
+		});
 
 		paine.add(btnAsterisco);
 		btnAsterisco.setBounds(210,260,60,50);
@@ -152,12 +212,42 @@ public class Janela extends JFrame {
 
 		paine.add(btnUm);
 		btnUm.setBounds(5,320,60,50);
+		btnUm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("1");
+				}else {
+					campo.setText(campo.getText() + "1");
+				}			
+			}
+		});
 
 		paine.add(btnDois);
 		btnDois.setBounds(70,320,60,50);
+		btnDois.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("2");
+				}else {
+					campo.setText(campo.getText() + "2");
+				}			
+			}
+		});
 
 		paine.add(btnTres);
 		btnTres.setBounds(140,320,60,50);
+		btnTres.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("3");
+				}else {
+					campo.setText(campo.getText() + "3");
+				}			
+			}
+		});
 
 		paine.add(btnMenos);
 		btnMenos.setBounds(210,320,60,50);
@@ -167,6 +257,16 @@ public class Janela extends JFrame {
 
 		paine.add(btnZero);
 		btnZero.setBounds(5,380,125,50);
+		btnZero.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if(campo.getText().equals("0")) {
+					campo.setText("0");
+				}else {
+					campo.setText(campo.getText() + "0");
+				}			
+			}
+		});
 
 		paine.add(btnIgual);
 		btnIgual.setBounds(280,320,60,110);
@@ -179,18 +279,8 @@ public class Janela extends JFrame {
 		
 		//Testes de ação com os botões
 		
-		btnOito.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				if(campo.getText().equals("0")) {
-					campo.setText("8");
-				}else {
-					campo.setText(campo.getText() + "8");
-				}
-				
-				
-			}
-		});
+		
+		
 			
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
