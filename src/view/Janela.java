@@ -14,7 +14,7 @@ import javax.swing.JMenuBar;
 //import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-import calculos.FuncoesMatematicas;
+//import calculos.FuncoesMatematicas;
 
 public class Janela extends JFrame {
 	
@@ -62,6 +62,7 @@ public class Janela extends JFrame {
 	//Configurações de métodos matemáticos, valores...
 	
 //	FuncoesMatematicas mat = new FuncoesMatematicas();
+	CalculosJanela calculo = new CalculosJanela();
 	String sinal = null; //Serve para ter certeza que, ao clicar em um botão, tal campo estará limpo, ou seja, antes o campo era nulo e só depois obteve algum valor
 	double valor1, valor2;
 
@@ -133,6 +134,15 @@ public class Janela extends JFrame {
 
 		paine.add(btnRaiz);
 		btnRaiz.setBounds(280,140,60,50);
+		btnRaiz.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "Raiz";
+				campo.setText("0");
+			}
+		});
 
 		paine.add(btnSete);
 		btnSete.setBounds(5,200,60,50);
@@ -175,6 +185,13 @@ public class Janela extends JFrame {
 
 		paine.add(btnBarra);
 		btnBarra.setBounds(210,200,60,50);
+		btnBarra.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "divisao";
+				campo.setText("0");
+			}
+		});
 
 		paine.add(btnPercent);
 		btnPercent.setBounds(280,200,60,50);
@@ -220,6 +237,13 @@ public class Janela extends JFrame {
 
 		paine.add(btnAsterisco);
 		btnAsterisco.setBounds(210,260,60,50);
+		btnAsterisco.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "multiplicacao";
+				campo.setText("0");
+			}
+		});
 
 		paine.add(btnUmx);
 		btnUmx.setBounds(280,260,60,50);
@@ -265,6 +289,13 @@ public class Janela extends JFrame {
 
 		paine.add(btnMenos);
 		btnMenos.setBounds(210,320,60,50);
+		btnMenos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "subtracao";
+				campo.setText("0");
+			}
+		});
 
 		paine.add(btnMais);
 		btnMais.setBounds(210,380,60,50);
@@ -299,28 +330,32 @@ public class Janela extends JFrame {
 		
 		
 		
-		//Botão de igual
-				/*
+		//Botão de igual				
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				valor2 = Double.parseDouble(campo.getText());
 
+				
 				if(sinal.equals("soma")) {
-					campo.setText(mat.soma(valor1, valor2) + "");
+					campo.setText(calculo.soma(valor1, valor2) + "");
 				}
 				else if(sinal.equals("subtracao")) {
-					campo.setText(mat.subtracao(valor1, valor2) - "");
+					campo.setText(calculo.subtracao(valor1, valor2) + "");
 				}
 				else if(sinal.equals("multiplicacao")) {
-					campo.setText(mat.multiplicacao(valor1, valor2) * "");
+					campo.setText(calculo.multiplicacao(valor1, valor2) + "");
+				}
+				else if(sinal.equals("divisao")){
+					campo.setText(calculo.divisao(valor1, valor2) + "");
 				}
 				else {
-					campo.setText(mat.divisao(valor1, valor2) / "");
+					campo.setText(calculo.raiz(valor1)+"");
 				}
 			}
 		});
-		*/
+		
+			
 		
 		//Botão sair
 		paine.add(btnSair);
