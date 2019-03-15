@@ -18,6 +18,19 @@ import javax.swing.JTextField;
 
 public class Janela extends JFrame {
 	
+	/*
+	 * >virgula
+	 * >mc
+	 * >mr
+	 * >ms
+	 * >m+
+	 * >m-
+	 * >ce
+	 * >+-
+	 * >porcentagem
+	 * >1/x
+	 * CalculosJava
+	 */
 
 	
 	//CAMPO DE TEXTO DOS NUMEROS
@@ -86,6 +99,7 @@ public class Janela extends JFrame {
 		paine.add(campo);
 		campo.setFont(new Font("Arial", Font.PLAIN, 25));
 		campo.setBounds(5,8,335,70);
+		campo.setEditable(false); //Pra impedir que digitem letras na calculadora
 		
 		
 		
@@ -121,13 +135,24 @@ public class Janela extends JFrame {
 		btnCe.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
+				if(campo.getText().equals(null)) {
+					
+				}
+				else {
+					campo.setText(campo.getText()+"");
+				}
+			}
+		});
+		
+		paine.add(btnC);
+		btnC.setBounds(140,140,60,50);
+		btnC.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
 				campo.setText(""); 
 			}
 			
 		});
-
-		paine.add(btnC);
-		btnC.setBounds(140,140,60,50);
 
 		paine.add(btnMaisMenos);
 		btnMaisMenos.setBounds(210,140,60,50);
@@ -195,6 +220,14 @@ public class Janela extends JFrame {
 
 		paine.add(btnPercent);
 		btnPercent.setBounds(280,200,60,50);
+		btnPercent.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "soma";
+				campo.setText("0");
+			}
+		});
+		
 
 		paine.add(btnQuatro);
 		btnQuatro.setBounds(5,260,60,50);
@@ -326,6 +359,11 @@ public class Janela extends JFrame {
 
 		paine.add(btnVirgula);
 		btnVirgula.setBounds(140,380,60,50);
+		btnVirgula.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		
 		
 		
