@@ -31,11 +31,18 @@ public class CalculosJanela {
 		return resul;
 		
 	}
-	
-	public double porcentagem(double a) {
+	/*
+	public double porcentagem(double a, double b) {
 		double resul;
-		//PRECISA CONSERTAR AQUI
-		resul = a;
+		resul = (a * 100 / b);
 		return resul;
 	}
+*/
+
+	public double maismenos(double a) {
+		double resul;
+		resul = a * (-1);
+		return resul;
+	}
+	
 }

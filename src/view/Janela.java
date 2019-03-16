@@ -19,17 +19,15 @@ import javax.swing.JTextField;
 public class Janela extends JFrame {
 	
 	/*
-	 * >virgula
-	 * >mc
-	 * >mr
-	 * >ms
-	 * >m+
-	 * >m-
-	 * >ce
-	 * >+-
-	 * >porcentagem
-	 * >1/x
-	 * CalculosJava
+	 * porcentagem
+	 * mr
+	 * ms
+	 * mc
+	 * m+
+	 * m-
+	 * %
+	 * 1/x
+	 * ,
 	 */
 
 	
@@ -107,18 +105,58 @@ public class Janela extends JFrame {
 		//Configurações dos botões
 		paine.add(btnMC);
 		btnMC.setBounds(5,85,60,50);
+		btnMC.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				
+				 
+			}
+			
+		});
 		
 		paine.add(btnMR);
 		btnMR.setBounds(70,85,60,50);
+		btnMR.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				 
+				
+			}
+			
+		});
 
 		paine.add(btnMS);
 		btnMS.setBounds(140,85,60,50);
+		btnMS.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				 
+				
+			}
+			
+		});
 
 		paine.add(btnMMais);
 		btnMMais.setBounds(210,85,60,50);
+		btnMMais.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				 
+				
+			}
+			
+		});
 
 		paine.add(btnMMenos);
 		btnMMenos.setBounds(280,85,60,50);
+		btnMMenos.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+			
+		});
 
 		paine.add(btnDelete);
 		btnDelete.setBounds(5,140,60,50);
@@ -156,6 +194,13 @@ public class Janela extends JFrame {
 
 		paine.add(btnMaisMenos);
 		btnMaisMenos.setBounds(210,140,60,50);
+		btnMaisMenos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "maismenos";
+				campo.setText("0");
+			}
+		});
 
 		paine.add(btnRaiz);
 		btnRaiz.setBounds(280,140,60,50);
@@ -223,7 +268,7 @@ public class Janela extends JFrame {
 		btnPercent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				valor1 = Double.parseDouble(campo.getText());
-				sinal = "soma";
+				sinal = "porcentagem";
 				campo.setText("0");
 			}
 		});
@@ -280,6 +325,12 @@ public class Janela extends JFrame {
 
 		paine.add(btnUmx);
 		btnUmx.setBounds(280,260,60,50);
+		btnUmx.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
 
 		paine.add(btnUm);
 		btnUm.setBounds(5,320,60,50);
@@ -354,13 +405,13 @@ public class Janela extends JFrame {
 			}
 		});
 
-		paine.add(btnIgual);
-		btnIgual.setBounds(280,320,60,110);
+		
 
 		paine.add(btnVirgula);
 		btnVirgula.setBounds(140,380,60,50);
 		btnVirgula.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
+				
 				
 			}
 		});
@@ -368,7 +419,9 @@ public class Janela extends JFrame {
 		
 		
 		
-		//Botão de igual				
+		//Botão de igual
+		paine.add(btnIgual);
+		btnIgual.setBounds(280,320,60,110);
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -387,8 +440,15 @@ public class Janela extends JFrame {
 				else if(sinal.equals("divisao")){
 					campo.setText(calculo.divisao(valor1, valor2) + "");
 				}
-				else {
+				else if(sinal.equals("raiz")){
 					campo.setText(calculo.raiz(valor1)+"");
+				}
+				
+				//else if(sinal.equals("porcentagem")) {
+				//	campo.setText(calculo.porcentagem(valor1, valor2)+"");
+				//}
+				else {
+					campo.setText(calculo.maismenos(valor1)+"");
 				}
 			}
 		});
