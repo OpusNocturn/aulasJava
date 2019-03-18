@@ -18,19 +18,7 @@ import javax.swing.JTextField;
 
 public class Janela extends JFrame {
 	
-	/*
-	 * porcentagem
-	 * mr
-	 * ms
-	 * mc
-	 * m+
-	 * m-
-	 * %
-	 * 1/x
-	 * ,
-	 */
-
-	
+		
 	//CAMPO DE TEXTO DOS NUMEROS
 	JTextField campo = new JTextField();
 	
@@ -75,7 +63,7 @@ public class Janela extends JFrame {
 //	FuncoesMatematicas mat = new FuncoesMatematicas();
 	CalculosJanela calculo = new CalculosJanela();
 	String sinal = null; //Serve para ter certeza que, ao clicar em um botão, tal campo estará limpo, ou seja, antes o campo era nulo e só depois obteve algum valor
-	double valor1, valor2;
+	double valor1, valor2, mvalor;
 
 
 	public Janela() {
@@ -109,7 +97,7 @@ public class Janela extends JFrame {
 			
 			public void actionPerformed(ActionEvent e) {
 				
-				 
+				 mvalor = 0;
 			}
 			
 		});
@@ -119,7 +107,7 @@ public class Janela extends JFrame {
 		btnMR.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				 
+				 campo.setText(Double.toString(mvalor));
 				
 			}
 			
@@ -130,7 +118,7 @@ public class Janela extends JFrame {
 		btnMS.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				 
+				 mvalor = Double.parseDouble(campo.getText());
 				
 			}
 			
@@ -141,8 +129,8 @@ public class Janela extends JFrame {
 		btnMMais.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
+				 mvalor += Double.parseDouble(campo.getText());
 				 
-				
 			}
 			
 		});
@@ -152,7 +140,7 @@ public class Janela extends JFrame {
 		btnMMenos.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				
+				mvalor -= Double.parseDouble(campo.getText());
 				
 			}
 			
@@ -173,12 +161,10 @@ public class Janela extends JFrame {
 		btnCe.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				if(campo.getText().equals(null)) {
-					
-				}
-				else {
-					campo.setText(campo.getText()+"");
-				}
+				valor1 = 0;
+				valor2 = 0;
+				sinal = null;
+				campo.setText("0");
 			}
 		});
 		
@@ -209,7 +195,7 @@ public class Janela extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				valor1 = Double.parseDouble(campo.getText());
-				sinal = "Raiz";
+				sinal = "raiz";
 				campo.setText("0");
 			}
 		});
@@ -327,8 +313,9 @@ public class Janela extends JFrame {
 		btnUmx.setBounds(280,260,60,50);
 		btnUmx.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
+				valor1 = Double.parseDouble(campo.getText());
+				sinal = "umx";
+				campo.setText("0");
 			}
 		});
 
@@ -411,12 +398,14 @@ public class Janela extends JFrame {
 		btnVirgula.setBounds(140,380,60,50);
 		btnVirgula.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				
-				
+
+				if(campo.getText().equals("0")) {
+					campo.setText(".");
+				}else {
+					campo.setText(campo.getText() + ".");
+				}			
 			}
 		});
-		
-		
 		
 		
 		//Botão de igual
@@ -444,9 +433,13 @@ public class Janela extends JFrame {
 					campo.setText(calculo.raiz(valor1)+"");
 				}
 				
-				//else if(sinal.equals("porcentagem")) {
-				//	campo.setText(calculo.porcentagem(valor1, valor2)+"");
-				//}
+				else if(sinal.equals("porcentagem")) {
+					campo.setText(calculo.porcentagem(valor1, valor2)+"");
+				}
+				
+				else if(sinal.equals("umx")) {
+					campo.setText(calculo.umx(valor1)+"");
+				}
 				else {
 					campo.setText(calculo.maismenos(valor1)+"");
 				}
