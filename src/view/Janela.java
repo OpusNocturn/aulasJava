@@ -7,14 +7,10 @@ import java.awt.Font;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-//import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-//import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-
-//import calculos.FuncoesMatematicas;
 
 public class Janela extends JFrame {
 	
@@ -22,7 +18,7 @@ public class Janela extends JFrame {
 	//CAMPO DE TEXTO DOS NUMEROS
 	JTextField campo = new JTextField();
 	
-	//OPÇÕESS NO TOPO DA JANELA
+	//OPÇÕES NO TOPO DA JANELA
 	JMenuBar menuBar = new JMenuBar();
 	
 	//BOTÕES
