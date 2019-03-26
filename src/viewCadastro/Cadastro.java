@@ -32,13 +32,13 @@ public class Cadastro extends JFrame {
 	JLabel lblRg = new JLabel("RG: ");
 	JLabel lblCep = new JLabel("CEP: ");
 	JLabel lblCelular = new JLabel("Celular: ");
-	JLabel lblCpf = new JLabel("Cpf: ");
+	JLabel lblCpf = new JLabel("CPF: ");
 	JLabel lblSexo = new JLabel("Sexo: ");
 	JLabel lblEstado = new JLabel("Estado: ");
 	
 	//Button
-	JButton btnSalvar = new JButton();
-	JButton btnImprimir = new JButton();
+	JButton btnSalvar = new JButton("Salvar");
+	JButton btnImprimir = new JButton("Imprimir");
 	
 	//ComboBox
 	JComboBox boxEstado = new JComboBox();
@@ -52,53 +52,110 @@ public class Cadastro extends JFrame {
 	
 	public Cadastro() {
 				
+		super("Cadastro de clientes");
 		//Container
 		Container paine = this.getContentPane();
 		
+		//Nome
 		paine.add(lblNome);
 		lblNome.setBounds(10,10,100,15);
 		
+		paine.add(txtNome);
+		txtNome.setBounds(80,10,140,20);
+		
+		//Endereço
 		paine.add(lblEndereco);
 		lblEndereco.setBounds(10,40,100,15);
 		
+		paine.add(txtEndereco);
+		txtEndereco.setBounds(80,40,140,20);
+		
+		//Cidade
 		paine.add(lblCidade);
 		lblCidade.setBounds(10,70,100,15);
 		
+		paine.add(txtCidade);
+		txtCidade.setBounds(80,70,140,20);
+		
+		//Bairro
 		paine.add(lblBairro);
 		lblBairro.setBounds(10,100,100,15);
 		
+		paine.add(txtBairro);
+		txtBairro.setBounds(80,100,140,20);
+		
+		//Telefone
 		paine.add(lblTelefone);
 		lblTelefone.setBounds(10,130,100,15);
 		
+		paine.add(txtTelefone);
+		txtTelefone.setBounds(80,130,140,20);
+		
+		//RG
 		paine.add(lblRg);
-		lblRg.setBounds(10,130,100,15);
+		lblRg.setBounds(10,160,100,15);
 		
-		//Arrumar a partir daqui
-		//Basta ajustar o eixo X deles
-		//
-		//
+		paine.add(txtRg);
+		txtRg.setBounds(80,160,140,20);
 		
+		
+		//Sexo
 		paine.add(lblSexo);
-		lblSexo.setBounds(10,10,100,15);
+		lblSexo.setBounds(250,10,100,15);
 		
+		grupo.add(rdbSexo[0]); //grupo para o sexo
+		grupo.add(rdbSexo[1]);
+		paine.add(rdbSexo[0]); //opção para o sexo
+		rdbSexo[0].setBounds(300, 3, 85, 30);
+		paine.add(rdbSexo[1]);
+		rdbSexo[1].setBounds(380, 3, 90, 30);
+		
+		//CEP
 		paine.add(lblCep);
-		lblCep.setBounds(10,40,100,15);
+		lblCep.setBounds(250,40,100,15);
 		
+		paine.add(txtCep);
+		txtCep.setBounds(300,40,140,20);
+		
+		//Estado
 		paine.add(lblEstado);
-		lblEstado.setBounds(10,70,100,15);
+		lblEstado.setBounds(250,70,100,15);
 		
+		paine.add(boxEstado);
+		boxEstado.setBounds(300,70,140,18);
+		boxEstado.addItem("São Paulo");
+		boxEstado.addItem("Rio de Janeiro");
+		boxEstado.addItem("Minas Gerais");
+		boxEstado.addItem("Acre");
+		
+		//Celular
 		paine.add(lblCelular);
-		lblCelular.setBounds(10,100,100,15);
+		lblCelular.setBounds(250,100,100,15);
 		
+		paine.add(txtCelular);
+		txtCelular.setBounds(300,100,140,20);
+		
+		//CPF
 		paine.add(lblCpf);
-		lblCpf.setBounds(110,130,100,15);
+		lblCpf.setBounds(250,130,100,15);
+		
+		paine.add(txtCpf);
+		txtCpf.setBounds(300,130,140,20);
+		
+		//Botões
+		paine.add(btnSalvar);
+		btnSalvar.setBounds(100,210,100,40);
+		
+		paine.add(btnImprimir);
+		btnImprimir.setBounds(250,210,100,40);
+		
 		
 		//Configurações janela
 		this.setLayout(null);
+		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 		this.setResizable(false);
-		// Abrir janela no meio -> this.setLocationRelativeTo(null);
-		this.setSize(500, 400);
+		this.setSize(480, 320);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
