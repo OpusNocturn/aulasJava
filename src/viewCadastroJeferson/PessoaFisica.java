@@ -1,4 +1,4 @@
-package viewCadastro;
+package viewCadastroJeferson;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -64,7 +64,7 @@ public class PessoaFisica extends JFrame{
 	MaskFormatter formatCep = null;
 	MaskFormatter formatRg = null;
 	
-	model.PessoaFisica pessoaFisica = new model.PessoaFisica();
+	//model.PessoaFisica pessoaFisica = new model.PessoaFisica();
 
 	public PessoaFisica(){
 		super("Cadastro PF");
@@ -180,8 +180,8 @@ public class PessoaFisica extends JFrame{
 		btnSalvar.setBounds(250, 250, 130, 30);
 		btnSalvar.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				pessoaFisica.setNome(txtNome.getText());
-				pessoaFisica.setEndereco(txtEnd.getText());
+			 //	pessoaFisica.setNome(txtNome.getText());
+			//	pessoaFisica.setEndereco(txtEnd.getText());
 			}
 		});
 		
