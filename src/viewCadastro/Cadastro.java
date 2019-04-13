@@ -1,6 +1,8 @@
 package viewCadastro;
 
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -66,6 +68,8 @@ public class Cadastro extends JFrame {
 	MaskFormatter formatCpf = null;
 	MaskFormatter formatCep = null;
 	MaskFormatter formatRg = null;
+	
+	modelCadastro.Cadastro cadastro = new modelCadastro.Cadastro();
 	
 	public Cadastro() {
 				
@@ -202,6 +206,12 @@ public class Cadastro extends JFrame {
 		//Botões
 		paine.add(btnSalvar);
 		btnSalvar.setBounds(100,210,100,40);
+		btnSalvar.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				cadastro.setNome(txtNome.getText());
+				cadastro.setEndereco(txtEndereco.getText());
+			}
+		});
 		
 		paine.add(btnImprimir);
 		btnImprimir.setBounds(250,210,100,40);
